@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "product_order_id_buyer": {
+      "type": "integer"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "product_provider_buyer": {
+      "type": "string"
+    }
+  },
+  "required": ["product_order_id_buyer", "timestamp", "product_provider_buyer"]
+}

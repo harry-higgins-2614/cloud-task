@@ -1,0 +1,4 @@
+Upstream->Inter Component Stream: event
+Inter Component Stream->Processor: subscribe
+note right of Processor: transform
+Processor->Inter Component Stream: publish
