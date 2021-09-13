@@ -2,7 +2,7 @@ import { Construct, Stack, StackProps } from '@aws-cdk/core';
 import { Code, Function, Runtime } from '@aws-cdk/aws-lambda';
 import { join } from 'path';
 
-export class StreamTakeHomeAssignment extends Stack {
+export class CloudTakeHomeAssignment extends Stack {
   private handler: Function;
   constructor(scope: Construct, id: string, props: StackProps) {
     super(scope, id, props);
