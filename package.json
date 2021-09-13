@@ -6,9 +6,9 @@
   },
   "scripts": {
     "js:build": "webpack --entry ./src/js/",
-    "js:watch": "webpack watch --entry ./src/js/ --node-env development",
-    "ts:build": "webpack --entry ./src/ts",
-    "ts:watch": "webpack watch --entry ./src/ts --node-env development",
+    "js:watch": "webpack watch --entry ./src/js/",
+    "ts:build": "webpack --entry ./src/ts/",
+    "ts:watch": "webpack watch --entry ./src/ts/",
     "start:server": "node external-service",
     "invoke": "sam-beta-cdk local invoke cloud-take-home-assignment/MyFunction --event event.json --env-vars env.json",
     "debug": "sam-beta-cdk local invoke cloud-take-home-assignment/MyFunction --event event.json --env-vars env.json -d 5858",

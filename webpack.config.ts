@@ -4,8 +4,7 @@ import * as webpack from 'webpack';
 const config: webpack.Configuration = {
   target: 'node',
   mode: 'production',
-  entry: path.resolve('src', 'index.ts'),
-  devtool: process.env.NODE_ENV === 'development' ? 'inline-source-map' : false,
+  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
