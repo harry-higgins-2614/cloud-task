@@ -9,18 +9,6 @@
     "@aws-cdk/aws-secretsmanager:parseOwnedSecretName": true,
     "@aws-cdk/aws-kms:defaultKeyPolicies": true,
     "@aws-cdk/aws-s3:grantWriteWithoutAcl": true,
-    "@aws-cdk/aws-ecs-patterns:removeDefaultDesiredCount": true,
-    "prod": {
-      "env": {
-        "account": "",
-        "region": "eu-west-2"
-      }
-    },
-    "test": {
-      "env": {
-        "account": "",
-        "region": "eu-west-2"
-      }
-    }
+    "@aws-cdk/aws-ecs-patterns:removeDefaultDesiredCount": true
   }
 }

@@ -12,7 +12,7 @@ export class StreamTakeHomeAssignment extends Stack {
       handler: 'index.handler',
       runtime: Runtime.NODEJS_14_X,
       environment: {
-        INVOKE_URL: 'http://127.0.0.1:3000',
+        PUBLISH_URL: 'http://host.docker.internal:3000',
       },
     });
   }

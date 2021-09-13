@@ -5,10 +5,10 @@
     "eda-esg-good-stream-listener": "bin/eda-esg-good-stream-listener.js"
   },
   "scripts": {
-    "js:build": "webpack --entry ./src/index.js",
-    "js:watch": "webpack watch --entry ./src/index.js --node-env development",
-    "ts:build": "webpack --entry ./src/index.ts",
-    "ts:watch": "webpack watch --entry ./src/index.ts --node-env development",
+    "js:build": "webpack --entry ./src/js/",
+    "js:watch": "webpack watch --entry ./src/js/ --node-env development",
+    "ts:build": "webpack --entry ./src/ts",
+    "ts:watch": "webpack watch --entry ./src/ts --node-env development",
     "start:server": "node external-service",
     "invoke": "sam-beta-cdk local invoke stream-take-home-assignment/MyFunction --event event.json --env-vars env.json",
     "debug": "sam-beta-cdk local invoke stream-take-home-assignment/MyFunction --event event.json --env-vars env.json -d 5858",
