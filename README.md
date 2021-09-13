@@ -1,11 +1,11 @@
-# Project: Stream Take Home Test
+# Project: Stream Take Home Assignment
 
 ## Tooling
 
 To contribute to Stream Take Home Test you will need:
 
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Node.js and NPM](https://nodejs.org/en/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Node.js and NPM](https://nodejs.org/en/)
 
 ## Install
 
@@ -29,8 +29,8 @@ The project includes [TS Auto Mock](https://typescript-tdd.github.io/ts-auto-moc
 
 `orta.vscode-jest` is one of the recommended extensions for this project. This extension has the following benefits:
 
-* Tests will run in the background when the project is open, and will alert you when any fail
-* Breakpoints can be set in your tests, or in the code being tested, and can be run in debug mode individually.
+- Tests will run in the background when the project is open, and will alert you when any fail
+- Breakpoints can be set in your tests, or in the code being tested, and can be run in debug mode individually.
 
 ## Deploy
 
