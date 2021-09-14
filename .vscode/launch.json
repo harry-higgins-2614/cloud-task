@@ -5,10 +5,7 @@
       "type": "node",
       "request": "launch",
       "name": "Invoke",
-      "program": "${workspaceRoot}/app.js",
-      "env": {
-        "INVOKE_URL": "http://localhost:3000"
-      },
+      "program": "${workspaceRoot}/app.js"
     }
   ]
 }
