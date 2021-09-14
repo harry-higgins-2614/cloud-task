@@ -38,9 +38,7 @@ The URL to publish to is available in your Lambda function via the environment v
 
 To complete the assignment you will need:
 
-- [AWS SAM CLI beta CDK build](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-cdk-getting-started.html)
 - [Node.js and NPM](https://nodejs.org/en/)
-- AWS CDK, available using `npm i -g aws-cdk`
 
 You can use any IDE but [Visual Studio Code](https://code.visualstudio.com/) is recommended as debugging is already configured.
 
@@ -65,13 +63,7 @@ To invoke your Lambda function run:
 npm run invoke
 ```
 
-Alternatively you can debug your Lambda function in Visual Studio Code by running:
-
-```
-npm run debug
-```
-
-You can then set breakpoints in your source files and attach the debugger via `Run > Start Debugging`.
+Alternatively you can debug your Lambda function in Visual Studio Code by setting breakpoints and using `Run > Start Debugging`.
 
 ## Test
 
