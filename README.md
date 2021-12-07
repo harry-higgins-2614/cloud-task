@@ -18,12 +18,13 @@ You are welcome to install any additional packages from NPM to help you complete
 
 ## Tasks
 
-- Implement the assignment using JavaScript or TypeScript. Under [src](./src), there are `js` and `ts` folders for JavaScript and TypeScript respectively - place all your code in the relevant folder, and delete the other. The entry point for your function is already provided and currently logs the event to the console.
+- Implement the assignment using JavaScript or TypeScript. Under [src](./src) there are two entry points, `index.js` and `index.ts` - you must delete the one you don't plan to use for your code to build correctly.
 - Your function should pick out `booking_completed` events and ignore other event types
 - Your function should transform events into the format defined in the [JSON Schema](./external-service/schema.json)
 - Your function should publish events to the [Mock Server](#mock-server)
 - Your function should have 100% test coverage, by adding tests under [test](./test).
 - File names for tests should end with `.test.ts` or `.test.js` to be picked up by the test runner.
+- Anything under the `external-service` should be treated as such, no changes should be made in this folder
 
 ## Mock Server
 
@@ -49,10 +50,17 @@ To install dependencies, run the command `npm install` from the project root.
 
 ## Build
 
-Webpack is included in the repository to bundle your source code with dependencies. There are build commands in the [package.json](./package.json) for JavaScript and TypeScript, depending on which you use. JavaScript commands are prefixed with `js:`, and equivalent TypeScript commands prefixed with `ts:`.
+To build your code, run this command:
 
-`js:build` will compile your source files once.
-`js:watch` will watch your source folder and compile on save.
+```
+npm run build
+```
+
+To build your code and watch for changes, run this command:
+
+```
+npm run watch
+```
 
 ## Invoke / Debug
 

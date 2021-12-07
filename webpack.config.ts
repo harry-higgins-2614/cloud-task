@@ -2,6 +2,7 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 
 const config: webpack.Configuration = {
+  entry: './src/index',
   target: 'node',
   mode: 'production',
   devtool: 'inline-source-map',

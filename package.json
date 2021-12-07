@@ -2,10 +2,8 @@
   "name": "cloud-take-home-assignment",
   "version": "0.1.0",
   "scripts": {
-    "js:build": "webpack --entry ./src/js/",
-    "js:watch": "webpack watch --entry ./src/js/",
-    "ts:build": "webpack --entry ./src/ts/",
-    "ts:watch": "webpack watch --entry ./src/ts/",
+    "build": "webpack",
+    "watch": "webpack watch",
     "start:server": "node external-service",
     "invoke": "node app",
     "test": "jest"
