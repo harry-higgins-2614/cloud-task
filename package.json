@@ -1,14 +1,9 @@
 {
   "name": "cloud-take-home-assignment",
   "version": "0.1.0",
-  "bin": {
-    "eda-esg-good-stream-listener": "bin/eda-esg-good-stream-listener.js"
-  },
   "scripts": {
-    "js:build": "webpack --entry ./src/js/",
-    "js:watch": "webpack watch --entry ./src/js/",
-    "ts:build": "webpack --entry ./src/ts/",
-    "ts:watch": "webpack watch --entry ./src/ts/",
+    "build": "webpack",
+    "watch": "webpack watch",
     "start:server": "node external-service",
     "invoke": "node app",
     "test": "jest"
@@ -27,8 +22,7 @@
       }
     },
     "collectCoverageFrom": [
-      "src/**/*.ts",
-      "cdk/**/*.ts"
+      "src/**/*.(js|ts)"
     ],
     "setupFiles": [
       "<rootDir>config.ts"
@@ -36,7 +30,7 @@
     "transform": {
       ".(ts|tsx)": "ts-jest"
     },
-    "testRegex": ".test\\.(ts|tsx)$",
+    "testRegex": ".test\\.(js|ts)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
