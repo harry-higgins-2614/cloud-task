@@ -4,25 +4,26 @@
 
 AFerry is building a cloud native system to support ferry bookings. When a booking is made, it is published to an event stream. There is an external system that needs to be notified about new bookings, and exposes a RESTful endpoint to receive booking events.
 
-Your assignment is to implement a Lambda function that is subscribed to these events and publishes `booking_completed` events to the external system.
+Your assignment is to implement a function that is subscribed to these events and publishes `booking_completed` events to the external system.
 
 ## Brief
 
-You will implement the Lambda function that is subscribed to the event stream. The event stream contains events of different types, your Lambda function should publish `booking_completed` events to the external system.
+You will implement the function that is subscribed to the event stream. The event stream contains events of different types, your function should publish `booking_completed` events to the external system.
 
-The external system accepts these events in a format defined in the enclosed [JSON Schema](./external-service/schema.json). Your Lambda function will need to transform events from the stream into this format before publishing.
+The external system accepts these events in a format defined in the enclosed [JSON Schema](./external-service/schema.json). Your function will need to transform events from the stream into this format before publishing.
 
-Infrastructure and build tools have been provided, so you can concentrate on the code for the Lambda function.
+Infrastructure and build tools have been provided, so you can concentrate on the code for the function.
 
 You are welcome to install any additional packages from NPM to help you complete the assignment.
 
 ## Tasks
 
-- Implement the assignment using JavaScript or TypeScript. Under [src](./src) and [test](./test), there are `js` and `ts` folders for JavaScript and TypeScript respectively - place all your code in the relevant folder, and delete the other. The entry point for your function is already provided and currently logs the event to the console.
-- Your Lambda function should pick out `booking_completed` events and ignore other event types
-- Your Lambda function should transform events into the format defined in the [JSON Schema](./external-service/schema.json)
-- Your Lambda function should publish events to the [Mock Server](#mock-server)
-- Your Lambda function should have 100% test coverage, by adding tests under [test](./test) in the relevant folder (js or ts).
+- Implement the assignment using JavaScript or TypeScript. Under [src](./src), there are `js` and `ts` folders for JavaScript and TypeScript respectively - place all your code in the relevant folder, and delete the other. The entry point for your function is already provided and currently logs the event to the console.
+- Your function should pick out `booking_completed` events and ignore other event types
+- Your function should transform events into the format defined in the [JSON Schema](./external-service/schema.json)
+- Your function should publish events to the [Mock Server](#mock-server)
+- Your function should have 100% test coverage, by adding tests under [test](./test).
+- File names for tests should end with `.test.ts` or `.test.js` to be picked up by the test runner.
 
 ## Mock Server
 
@@ -32,7 +33,7 @@ A mock server is provided for you to publish events to. This can be started by r
 npm run start:server
 ```
 
-The URL to publish to is available in your Lambda function via the environment variable `PUBLISH_URL`. Requests will receive a 200 response code when the request body passes validation. If the request body does not pass validation, the server will respond with a 400 response code and an explanation.
+The URL to publish to is available in your function via the environment variable `PUBLISH_URL`. Requests will receive a 200 response code when the request body passes validation. If the request body does not pass validation, the server will respond with a 400 response code and an explanation.
 
 ## Tooling
 
@@ -55,15 +56,15 @@ Webpack is included in the repository to bundle your source code with dependenci
 
 ## Invoke / Debug
 
-Your Lambda function can be invoked using the SAM CLI beta. If you haven't installed that please see [Tooling](#tooling). Running invoke or debug commands will invoke your Lambda function with a sample event, containing a number of records.
+Running invoke or debug commands will invoke your function with a sample event, containing a number of records. This command won't work if your function hasn't been built by the relevant [build](#Build) command.
 
-To invoke your Lambda function run:
+To invoke your function run:
 
 ```
 npm run invoke
 ```
 
-Alternatively you can debug your Lambda function in Visual Studio Code by setting breakpoints and using `Run > Start Debugging`.
+Alternatively you can debug your function in Visual Studio Code by setting breakpoints and using `Run > Start Debugging`.
 
 ## Test
 
