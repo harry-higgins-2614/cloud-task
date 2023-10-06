@@ -6,6 +6,12 @@ AFerry is building a cloud native system to support ferry bookings. When a booki
 
 Your assignment is to implement a function that is subscribed to these events and publishes `booking_completed` events to the external system.
 
+## Submitting
+
+- Clone this repo into the platform of your choice
+- Create a pull request for your changes
+- Email your point of contact at AFerry with a link to the PR
+
 ## Brief
 
 You will implement the function that is subscribed to the event stream. The event stream contains events of different types, your function should publish `booking_completed` events to the external system.
